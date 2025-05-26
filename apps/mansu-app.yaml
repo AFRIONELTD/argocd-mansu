@@ -1,8 +1,8 @@
-name: account-service
-project: afrione-production-project
+name: mansu-crypto-service
+project: mansu-project
 namespace: production
 values: |-
-  fullnameOverride: account-service
+  fullnameOverride: mansu-crypto-service
   image: 
     repository: afrioneltd/mansu-crypto-service:prod-app-41
   namespace: production
@@ -12,8 +12,8 @@ values: |-
   role:
     enabled: true
   ingress:
-    host: account-service
-    domain: afrione.co
+    host: mansu-crypto-service
+    domain:  mansu.io
   resources:
     requests:
       memory: "450Mi"
