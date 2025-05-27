@@ -1,6 +1,6 @@
 name: mansu-crypto-service
 project: mansu-project
-namespace: production
+namespace: sandbox
 values: |-
   fullnameOverride: mansu-crypto-service
   image: 
