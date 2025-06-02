@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: mansu-crypto-service
   image: 
-    repository: afrioneltd/mansu-crypto-service:prod-app-41
+    repository: afrioneltd/mansu-crypto-service:app-1
   namespace: production
   containerPort: 9003
   autoscaling:
