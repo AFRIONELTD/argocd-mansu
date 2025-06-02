@@ -1,10 +1,10 @@
-name: mansu-crypto-service
+name: crypto-api-service
 project: mansu-project
 namespace: sandbox
 values: |-
-  fullnameOverride: mansu-crypto-service
+  fullnameOverride: crypto-api-service
   image: 
-    repository: afrioneltd/mansu-crypto-service:prod-app-41
+    repository: afrioneltd/mansu-crypto-service:app-41
   namespace: production
   containerPort: 9003
   autoscaling:
@@ -12,7 +12,7 @@ values: |-
   role:
     enabled: true
   ingress:
-    host: mansu-crypto-service
+    host: crypto-api-service
     domain:  mansu.io
   resources:
     requests:
@@ -33,14 +33,19 @@ values: |-
     failureThreshold: 5
     periodSeconds: 15
     initialDelaySeconds: 120
+  envFrom:
+    - secretRef:
+        name: crypto-api-service
   env:
-    - name: ACCOUNT_SERVICE_HOST
-      value: http://account-service
+    - name: KUBERNETES_NAMESPACE
+      value: sandbox
+    - name: SPRING_PROFILES_ACTIVE
+      value: sandbox
   volumeMounts:
     - name: config
-      mountPath: "/afrione/config"
+      mountPath: "/mansu/config"
       readOnly: true
   volumes:
     - name: config
       configMap:
-        name: account-service
+        name: crypto-api-service
