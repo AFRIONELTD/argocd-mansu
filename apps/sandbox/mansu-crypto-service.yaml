@@ -16,10 +16,10 @@ values: |-
     domain:  mansu.io
   resources:
     requests:
-      memory: "450Mi"
+      memory: "300Mi"
       cpu: "150m"
     limits:
-      memory: "1000Mi"
+      memory: "650Mi"
       cpu: "600m"
   lProbe:
     enabled: true
