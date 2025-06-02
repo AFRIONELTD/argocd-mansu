@@ -1,5 +1,5 @@
 name: mansu-crypto-service
-project: mansu-project
+project: mansu-project-prod
 namespace: production
 values: |-
   fullnameOverride: mansu-crypto-service
