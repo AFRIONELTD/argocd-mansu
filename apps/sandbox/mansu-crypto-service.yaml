@@ -5,7 +5,7 @@ values: |-
   fullnameOverride: crypto-api-service
   image: 
     repository: afrioneltd/mansu-crypto-service:app-1
-  namespace: production
+  namespace: sandbox
   containerPort: 9003
   autoscaling:
     enabled: false
@@ -16,10 +16,10 @@ values: |-
     domain:  mansu.io
   resources:
     requests:
-      memory: "300Mi"
+      memory: "400Mi"
       cpu: "150m"
     limits:
-      memory: "650Mi"
+      memory: "700Mi"
       cpu: "600m"
   lProbe:
     enabled: true
