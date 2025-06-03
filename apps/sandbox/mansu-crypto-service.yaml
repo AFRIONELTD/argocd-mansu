@@ -6,7 +6,7 @@ values: |-
   image: 
     repository: afrioneltd/mansu-crypto-service:app-1
   namespace: sandbox
-  containerPort: 9003
+  containerPort: 9001
   autoscaling:
     enabled: false
   role:
