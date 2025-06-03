@@ -41,11 +41,26 @@ values: |-
       value: sandbox
     - name: SPRING_PROFILES_ACTIVE
       value: sandbox
+    - name: DATABASE_USERNAME
+      valueFrom:
+        secretKeyRef:
+          name: crypto-api-service
+          key: database.username
+    - name: DATABASE_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: crypto-api-service
+          key: database.password
     - name: TOKEN_ISSUER
       valueFrom:
         secretKeyRef:
           name: crypto-api-service
           key: token.issuer
+    - name: TOKEN_CLIENT_SECRET_KEY
+      valueFrom:
+        secretKeyRef:
+          name: crypto-api-service
+          key: token.client.secret-key
   volumeMounts:
     - name: config
       mountPath: "/mansu/config"
