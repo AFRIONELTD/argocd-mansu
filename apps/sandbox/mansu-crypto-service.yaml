@@ -56,11 +56,6 @@ values: |-
         secretKeyRef:
           name: crypto-api-service
           key: token.issuer
-    - name: TOKEN_CLIENT_SECRET_KEY
-      valueFrom:
-        secretKeyRef:
-          name: crypto-api-service
-          key: token.client.secret-key
   volumeMounts:
     - name: config
       mountPath: "/mansu/config"
