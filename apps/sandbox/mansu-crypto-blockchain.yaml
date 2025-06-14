@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: mansu-blockchain-core
   image: 
-    repository: afrioneltd/mansu-crypto-blockchain:app-4
+    repository: afrioneltd/mansu-crypto-blockchain:app-5
   namespace: sandbox
   containerPort: 3000
   autoscaling:
