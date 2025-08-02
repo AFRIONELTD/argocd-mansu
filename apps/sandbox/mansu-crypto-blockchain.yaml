@@ -33,6 +33,38 @@ values: |-
     failureThreshold: 5
     periodSeconds: 10
     initialDelaySeconds: 60
-  envFrom:
-    - configMapRef:
-        name: blockchain-core
+  env:
+    enabled: true
+    envFrom:
+      - configMapRef:
+          name: blockchain-core
+      - secretRef:
+          name: blockchain-core-test
+
+{{- if .Values.env.enabled }}
+{{- range .Values.env.envFrom }}
+{{- if hasKey . "secretRef" }}
+apiVersion: external-secrets.io/v1
+kind: ClusterExternalSecret
+metadata:
+  name: {{ $.Values.fullnameOverride }}
+spec:
+  externalSecretName: {{ .secretRef.name }}
+  refreshTime: "1m"
+  namespaceSelector:
+    matchLabels:
+      kubernetes.io/metadata.name: {{ $.Values.namespace }}
+  externalSecretSpec:
+    secretStoreRef:
+      name: awssecretsmanager
+      kind: ClusterSecretStore
+    refreshInterval: 1m
+    target:
+      name: {{ .secretRef.name }}
+      creationPolicy: Owner
+    dataFrom:
+      - extract:
+          key: {{ .secretRef.name }}
+{{- end }}
+{{- end }}
+{{- end }}

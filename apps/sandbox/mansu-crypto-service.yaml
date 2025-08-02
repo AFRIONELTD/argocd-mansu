@@ -33,10 +33,12 @@ values: |-
     failureThreshold: 5
     periodSeconds: 15
     initialDelaySeconds: 120
-  envFrom:
-    - secretRef:
-        name: crypto-api-service
   env:
+    enabled: true
+    envFrom:
+      - secretRef:
+          name: crypto-api-service
+    variables:
     - name: KUBERNETES_NAMESPACE
       value: sandbox
     - name: SPRING_PROFILES_ACTIVE
