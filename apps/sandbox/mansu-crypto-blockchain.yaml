@@ -39,6 +39,6 @@ values: |-
       - secretRef:
           name: blockchain-core-test
       - secretRef:
-          name: another-secret
+          name: another-secret-again
       - configMapRef:
           name: blockchain-core
