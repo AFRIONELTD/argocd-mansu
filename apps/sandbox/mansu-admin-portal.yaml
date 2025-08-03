@@ -33,4 +33,5 @@ values: |-
     failureThreshold: 5
     periodSeconds: 5
     initialDelaySeconds: 10
-
+  env:
+    enabled: false
