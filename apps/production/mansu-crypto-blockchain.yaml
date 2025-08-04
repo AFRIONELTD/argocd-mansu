@@ -1,0 +1,44 @@
+name: mansu-blockchain-core
+project: mansu-project
+namespace: production
+values: |-
+  fullnameOverride: mansu-blockchain-core
+  image: 
+    repository: afrioneltd/mansu-crypto-blockchain:prod-app-10
+  namespace: production
+  containerPort: 3000
+  autoscaling:
+    enabled: false
+  role:
+    enabled: true
+  ingress:
+    host: blockchain-service
+    domain: mansu.io
+  resources:
+    requests:
+      memory: "100Mi"
+      cpu: "50m"
+    limits:
+      memory: "200Mi"
+      cpu: "300m"
+  lProbe:
+    enabled: true
+    path: /health
+    failureThreshold: 5
+    periodSeconds: 10
+    initialDelaySeconds: 60
+  rProbe:
+    enabled: true
+    path: /health
+    failureThreshold: 5
+    periodSeconds: 10
+    initialDelaySeconds: 60
+  env:
+    enabled: true
+    envFrom:
+      - secretRef:
+          name: blockchain-core_live
+      - secretRef:
+          name: mansu-wallet-detail
+      - configMapRef:
+          name: blockchain-core
