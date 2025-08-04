@@ -37,7 +37,7 @@ values: |-
     enabled: true
     envFrom:
       - secretRef:
-          name: blockchain-core_live
+          name: blockchain-core-live
       - secretRef:
           name: mansu-wallet-detail
       - configMapRef:
