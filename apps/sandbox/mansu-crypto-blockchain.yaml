@@ -38,7 +38,5 @@ values: |-
     envFrom:
       - secretRef:
           name: blockchain-core-test
-      - secretRef:
-          name: another-secret-again
       - configMapRef:
           name: blockchain-core
