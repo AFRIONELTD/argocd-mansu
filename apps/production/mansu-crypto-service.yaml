@@ -4,7 +4,7 @@ namespace: production
 values: |-
   fullnameOverride: crypto-api-service
   image: 
-    repository: afrioneltd/mansu-crypto-service:prod-app-61
+    repository: afrioneltd/mansu-crypto-service:prod-app-62
   namespace: production
   containerPort: 9001
   autoscaling:
