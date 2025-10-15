@@ -4,7 +4,7 @@ namespace: production
 values: |-
   fullnameOverride: mansu-blockchain-core
   image: 
-    repository: afrioneltd/mansu-crypto-blockchain:prod-app-49
+    repository: afrioneltd/mansu-crypto-blockchain:prod-app-50
   namespace: production
   containerPort: 3000
   autoscaling:
