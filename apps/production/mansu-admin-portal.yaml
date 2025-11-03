@@ -4,7 +4,7 @@ namespace: production
 values: |-
   fullnameOverride: mansu-admin-portal
   image: 
-    repository: afrioneltd/mansu-admin-portal:prod-app-2
+    repository: afrioneltd/mansu-admin-portal:prod-app-3
   namespace: production
   containerPort: 80
   autoscaling:
