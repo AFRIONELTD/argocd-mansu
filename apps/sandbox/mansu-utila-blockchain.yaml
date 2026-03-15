@@ -1,0 +1,40 @@
+name: mansu-utila-blockchain
+project: mansu-project
+namespace: sandbox
+values: |-
+  fullnameOverride: mansu-utila-blockchain
+  image: 
+    repository: afrioneltd/mansu-utila-blockchain:app-17
+  namespace: sandbox
+  containerPort: 3001
+  autoscaling:
+    enabled: false
+  role:
+    enabled: true
+  ingress:
+    host: blockchain-utila-staging
+    domain: mansu.io
+  resources:
+    requests:
+      memory: "64Mi"
+      cpu: "50m"
+    limits:
+      memory: "200Mi"
+      cpu: "300m"
+  lProbe:
+    enabled: true
+    path: /health
+    failureThreshold: 5
+    periodSeconds: 10
+    initialDelaySeconds: 60
+  rProbe:
+    enabled: true
+    path: /health
+    failureThreshold: 5
+    periodSeconds: 10
+    initialDelaySeconds: 60
+  env:
+    enabled: true
+    envFrom:
+      - configMapRef:
+          name: mansu-utila-blockchain
