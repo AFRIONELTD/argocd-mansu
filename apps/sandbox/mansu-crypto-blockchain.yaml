@@ -23,13 +23,13 @@ values: |-
       cpu: "300m"
   lProbe:
     enabled: true
-    path: /health
+    path: /api/v2/auth/health
     failureThreshold: 5
     periodSeconds: 10
     initialDelaySeconds: 60
   rProbe:
     enabled: true
-    path: /health
+    path: /api/v2/auth/health
     failureThreshold: 5
     periodSeconds: 10
     initialDelaySeconds: 60
