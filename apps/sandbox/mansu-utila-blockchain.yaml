@@ -36,5 +36,7 @@ values: |-
   env:
     enabled: true
     envFrom:
+      - secretRef:
+          name: utila-key-secrets
       - configMapRef:
           name: mansu-utila-blockchain
