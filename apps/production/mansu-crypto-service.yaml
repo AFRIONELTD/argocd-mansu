@@ -38,6 +38,8 @@ values: |-
     envFrom:
       - secretRef:
           name: crypto-api-service-live
+      - secretRef:
+          name: mansu-utila-secret
     variables:
     - name: KUBERNETES_NAMESPACE
       value: production
