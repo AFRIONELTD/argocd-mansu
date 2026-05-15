@@ -38,6 +38,8 @@ values: |-
     envFrom:
       - secretRef:
           name: crypto-api-service
+      - secretRef:
+          name: utila-key-secrets
     variables:
     - name: KUBERNETES_NAMESPACE
       value: sandbox
