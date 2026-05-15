@@ -1,42 +1,42 @@
-name: mansu-blockchain-core
-project: mansu-project
-namespace: sandbox
-values: |-
-  fullnameOverride: mansu-blockchain-core
-  image: 
-    repository: afrioneltd/mansu-crypto-blockchain:app-17
-  namespace: sandbox
-  containerPort: 3000
-  autoscaling:
-    enabled: false
-  role:
-    enabled: true
-  ingress:
-    host: blockchain-core
-    domain: mansu.io
-  resources:
-    requests:
-      memory: "64Mi"
-      cpu: "50m"
-    limits:
-      memory: "200Mi"
-      cpu: "300m"
-  lProbe:
-    enabled: true
-    path: /health
-    failureThreshold: 5
-    periodSeconds: 10
-    initialDelaySeconds: 60
-  rProbe:
-    enabled: true
-    path: /health
-    failureThreshold: 5
-    periodSeconds: 10
-    initialDelaySeconds: 60
-  env:
-    enabled: true
-    envFrom:
-      - secretRef:
-          name: blockchain-core-test
-      - configMapRef:
-          name: blockchain-core
+#name: mansu-blockchain-core
+#project: mansu-project
+#namespace: sandbox
+#values: |-
+#  fullnameOverride: mansu-blockchain-core
+#  image:
+#    repository: afrioneltd/mansu-crypto-blockchain:app-17
+#  namespace: sandbox
+#  containerPort: 3000
+#  autoscaling:
+#    enabled: false
+#  role:
+#    enabled: true
+#  ingress:
+#    host: blockchain-core
+#    domain: mansu.io
+#  resources:
+#    requests:
+#      memory: "64Mi"
+#      cpu: "50m"
+#    limits:
+#      memory: "200Mi"
+#      cpu: "300m"
+#  lProbe:
+#    enabled: true
+#    path: /health
+#    failureThreshold: 5
+#    periodSeconds: 10
+#    initialDelaySeconds: 60
+#  rProbe:
+#    enabled: true
+#    path: /health
+#    failureThreshold: 5
+#    periodSeconds: 10
+#    initialDelaySeconds: 60
+#  env:
+#    enabled: true
+#    envFrom:
+#      - secretRef:
+#          name: blockchain-core-test
+#      - configMapRef:
+#          name: blockchain-core
