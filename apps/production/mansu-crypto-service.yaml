@@ -40,8 +40,6 @@ values: |-
           name: crypto-api-service-live
       - secretRef:
           name: mansu-utila-secret
-      - secretRef:
-          name: mansu-utila-secret-key
     variables:
     - name: KUBERNETES_NAMESPACE
       value: production
