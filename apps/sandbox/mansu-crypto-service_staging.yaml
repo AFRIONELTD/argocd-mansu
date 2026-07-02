@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: crypto-api-service-v2
   image: 
-    repository: afrioneltd/mansu-crypto-service:staging-app-293
+    repository: afrioneltd/mansu-crypto-service:staging-app-294
   namespace: sandbox
   containerPort: 9001
   autoscaling:
