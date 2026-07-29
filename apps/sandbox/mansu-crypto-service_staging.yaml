@@ -23,13 +23,13 @@ values: |-
       cpu: "600m"
   lProbe:
     enabled: true
-    path: /actuator/health
+    path: /api/v2/auth/health
     failureThreshold: 5
     periodSeconds: 15
     initialDelaySeconds: 120
   rProbe:
     enabled: true
-    path: /actuator/health
+    path: /api/v2/auth/health
     failureThreshold: 5
     periodSeconds: 15
     initialDelaySeconds: 120
