@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: mansu-admin-portal
   image: 
-    repository: afrioneltd/mansu-admin-portal:app-78
+    repository: afrioneltd/mansu-admin-portal:app-79
   namespace: sandbox
   containerPort: 80
   autoscaling:
