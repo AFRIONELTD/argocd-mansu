@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: mansu-utila-blockchain
   image: 
-    repository: afrioneltd/mansu-utila-blockchain:app-12
+    repository: afrioneltd/mansu-utila-blockchain:app-13
   namespace: sandbox
   containerPort: 3001
   autoscaling:
