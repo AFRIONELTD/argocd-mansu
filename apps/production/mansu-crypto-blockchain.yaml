@@ -40,8 +40,6 @@ values: |-
       - secretRef:
           name: blockchain-core-live
       - secretRef:
-          name: mansu-utila-secret
-      - secretRef:
           name: mansu-utila-secret-key
       - configMapRef:
           name: blockchain-core
