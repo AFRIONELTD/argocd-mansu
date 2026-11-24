@@ -12,6 +12,7 @@ values: |-
   role:
     enabled: true
   ingress:
+    enabled: false
     host: blockchain-service
     domain: mansu.io
   resources:
